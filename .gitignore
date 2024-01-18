@@ -22,9 +22,9 @@
 .AppleDouble
 .LSOverride
 
-# Dependency directories
-node_modules/
-jspm_packages/
+# # Dependency directories
+# node_modules/
+# jspm_packages/
 
 # Icon must end with two \r
 Icon
@@ -293,7 +293,7 @@ project.lock.json
 
 # Output folder used by Webpack or other FE stuff
 **/node_modules/*
-**/wwwroot/*
+# **/wwwroot/*
 
 # SpecFlow specific
 *.feature.cs
