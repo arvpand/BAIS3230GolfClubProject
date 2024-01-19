@@ -19,21 +19,32 @@
 </head>
 
 <body>
-    <header>
-        <h1 class=" text-6xl"><a href="~/Index">BAISTGolfClubSystem</a></h1>
-        <nav>
-            <ul>
-                <li><a href="~/Index">Home</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        @RenderBody()
-    </main>
-    <footer>
-        <small>&copy; Copyright 2020 - @DateTime.Now.Year </small>
-    </footer>
-    @* <script src="~/libraries/js/validation.js"></script> *@
+    <div class=" grid-cols-1 grid-rows-3">
+        <header>
+            <nav class=" flex items-center justify-between z-10">
+                <h1 class=" text-6xl"><a href="~/Index">BAISTGolfClubSystem</a></h1>
+                <ul>
+                    <li><a href="~/Index">Home</a></li>
+                    <li><a href="~/GolfCourse">Golf Course</a></li>
+                    <li><a href="~/About">About</a></li>
+                </ul>
+            </nav>
+            @if (ViewData["Title"] == "Home")
+            {
+                <section class=" absolute top-0 left-0 z-0">
+                    <img src="~/img/pexels-madison-wooley-5005974.jpg" alt=""
+                        class=" object-cover h-screen w-screen object-center">
+                </section>
+            }
+        </header>
+        <main>
+            @RenderBody()
+        </main>
+        <footer>
+            <small>&copy; Copyright 2020 - @DateTime.Now.Year </small>
+        </footer>
+        @* <script src="~/libraries/js/validation.js"></script> *@
+    </div>
 </body>
 
 </html>
